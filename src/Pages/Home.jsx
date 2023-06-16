@@ -21,5 +21,5 @@ export default function Home() {
       //   else {}
     );
   });
-  return !loading ? <LOader/> : <HomeComponents />;
+  return loading ? <Loader/> : <HomeComponents />;
 }
