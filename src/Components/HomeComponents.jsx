@@ -1,8 +1,10 @@
 import React from "react";
-import { onLogout } from "../api/AuthApi";
+import PostStatus from "./Common/PostUpdate";
 
-export default function HomeComponents() {
-  return <div>
-    <button onClick={onLogout}>Logout</button>
-  </div>;
+export default function HomeComponent({ currentUser }) {
+  return (
+    <div className="home-component">
+      <PostStatus currentUser={currentUser} />
+    </div>
+  );
 }

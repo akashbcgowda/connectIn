@@ -7,5 +7,24 @@
 }
 .linkedinLogo {
     width: 65px;
+    align-items: center;
+    justify-content: space-between;
+    width: 55%;
     margin-left: 20px;
   }
+.react-icon{
+    color: #787878;
+    cursor: pointer;
+}
+
+.react-icon:hover {
+    color: black;
+}
+user-logo {
+    width: 40px;
+    position: absolute;
+    right: 30px;
+    cursor:pointer;
+    
+}
+
