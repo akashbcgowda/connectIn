@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LinkedinLogo from "../../../assets/LinkedinLogo.png"
-import SearchUsers from "./SearchUsers";
+//import SearchUsers from "./SearchUsers";
 import {
   AiOutlineHome,
   AiOutlineUserSwitch,
@@ -8,6 +8,7 @@ import {
   AiOutlineMessage,
   AiOutlineBell,
 } from "react-icons/ai";
+
 import { BsBriefcase } from "react-icons/bs"
 
 import "./index.scss";

@@ -21,7 +21,7 @@ export default function LoginComponents() {
   };
   return (
     <div className="login-wrapper">
-      <img src={LinkedinLogo} alt="LinkedIn Logo" className="linkedinLogo" />
+      <img src={LinkedinLogo} width={2} alt="LinkedIn Logo" className="linkedinLogo" />
       <div className="login-wrapper-inner ">
         <h1 className="heading">Sign in</h1>
         <p className="sub-heading">Stay updated on your professional world</p>

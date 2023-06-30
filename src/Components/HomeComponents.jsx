@@ -1,10 +1,12 @@
 import React from "react";
-import PostStatus from "./Common/PostUpdate";
+// import PostStatus from "./Common/PostUpdate";
+import Topbar from "./Common/Topbar";
 
 export default function HomeComponent({ currentUser }) {
   return (
     <div className="home-component">
-      <PostStatus currentUser={currentUser} />
+      <Topbar/>
+      {/* <PostStatus currentUser={currentUser} /> */}
     </div>
   );
 }
