@@ -1,19 +1,37 @@
 import React from 'react';
-import {  Modal } from 'antd';
-const  ModalComponent = ({ modalOpen, setModalOpen,}) => {
+import {  Modal,Button } from 'antd';
+const  ModalComponent = ({ modalOpen,
+   setModalOpen,
+   sendStatus ,
+   setSatatus,
+   }) => {
  return (
     <>
       
       <Modal
-      title="Vertically centered modal dialog"
+      title="Create a post"
       centered
         open={modalOpen}
         onOk={() => setModalOpen(false)}
         onCancel={() => setModalOpen(false)}
+        footer={[
+          
+          <Button 
+          onClick={sendStatus}
+          key="submit" type="primary" disabled ={status.length> 0? false:true} >
+            post
+          </Button>,
+         
+        ]}
       >
-        <p>some contents...</p>
-        <p>some contents...</p>
-        <p>some contents...</p>
+       < input
+       className='Modal-input'
+       placeholder='what do you want to talk about?'
+       onChange={() => setSatatus(Event.target.value)}
+       value={status}
+       />
+
+       
       </Modal>
       
     </>

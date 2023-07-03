@@ -1,8 +1,29 @@
-import React ,{useState}from 'react'
+import React ,{useState,useMemo}from 'react'
+import { postStatus,/*getStatus*/} from '../../../api/FirestoreAPI';
 import ModalComponent from '../Modal';
+import postsCard from '../PostsCard';
+import { getCurrentTimeStamp } from '../../../helper/useMoment';
 import "./index.scss";
-export default function PostStatus() {
+import { Empty } from 'antd';
+export default function PostStatus({ currentUser }) {
     const [modal1Open, setModalOpen] = useState(false);
+    const [status ,setstatus] = useState("");
+    const [allStatuses , setallStatuses] = useState([])
+    const sendStatus = async() =>{
+      let object = {
+        status: status,
+        timeStamp: getCurrentTimeStamp("LLL"),
+      }
+      await postStatus(status);
+      await setModalOpen(false)
+      await setstatus("")
+    };
+    console.log( getCurrentTimeStamp("LLL")),
+  
+    useMemo (() => {
+        getPost();
+    },[] )
+    
   return (
     <div className='post-status-main'>
         <div className='post-status'>
@@ -11,7 +32,17 @@ export default function PostStatus() {
             </button>  
          </div>
        
-       <ModalComponent modalOpen={modalOpen} setModalOpen={setModalOpen}/>
+       <ModalComponent 
+       setstatus = {setstatus}
+       modalOpen={modalOpen} setModalOpen={setModalOpen}
+       status ={status}
+       sendStatus={sendStatus}
+       />
+       <div>
+       {allStatuses.map((status)=> {
+        return  <postsCard posts ={posts}/>;
+      })}
+      </div>
     </div>
   )
 }
