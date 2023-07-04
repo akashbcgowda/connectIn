@@ -38,7 +38,8 @@ export default function Topbar() {
       <AiOutlineMessage size={30} className="react-icon"/>
       <AiOutlineBell size={30} className="react-icon"/>
     </div>
-    < img className="user-logo" src={user} alt="user"/>
+    <div>< img className="user-logo" src={user} alt="user"/></div>
+    
     </div>
   );
 }

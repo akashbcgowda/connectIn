@@ -1,6 +1,7 @@
 import React from 'react';
 import {  Modal,Button } from 'antd';
-const  ModalComponent = ({ modalOpen,
+const  ModalComponent = ({ 
+   modalOpen,
    setModalOpen,
    sendStatus ,
    setSatatus,
@@ -29,6 +30,7 @@ const  ModalComponent = ({ modalOpen,
        placeholder='what do you want to talk about?'
        onChange={() => setSatatus(Event.target.value)}
        value={status}
+       type='text'
        />
 
        

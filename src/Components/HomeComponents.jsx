@@ -5,6 +5,7 @@ import Topbar from "./Common/Topbar";
 export default function HomeComponent({ currentUser }) {
   return (
     <div className="home-component">
+      <Topbar/>
       <PostStatus/>
        
     </div>

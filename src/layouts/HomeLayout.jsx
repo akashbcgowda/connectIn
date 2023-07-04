@@ -5,8 +5,8 @@ import Topbar from '../Components/Common/Topbar';
 export default function HomeLayout() {
   return (
     <div>
-        <Topbar/>
-        <Home/>
+        
+        <Home><Topbar/></Home>
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import React ,{useState,useMemo}from 'react'
-import { postStatus,/*getStatus*/} from '../../../api/FirestoreAPI';
+import { postStatus,getStatus} from '../../../api/FirestoreAPI';
 import ModalComponent from '../Modal';
 import postsCard from '../PostsCard';
 import { getCurrentTimeStamp } from '../../../helper/useMoment';
 import "./index.scss";
 import { Empty } from 'antd';
 export default function PostStatus({ currentUser }) {
-    const [modal1Open, setModalOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
     const [status ,setstatus] = useState("");
     const [allStatuses , setallStatuses] = useState([])
     const sendStatus = async() =>{
@@ -21,13 +21,13 @@ export default function PostStatus({ currentUser }) {
     console.log( getCurrentTimeStamp("LLL")),
   
     useMemo (() => {
-        getPost();
+        // getPost();
     },[] )
     
   return (
     <div className='post-status-main'>
         <div className='post-status'>
-          <button className='Open-post-model'onClick={() => setModal1Open(true)}>
+          <button className='Open-post-model'onClick={() => setModalOpen(true)}>
             Start a post
             </button>  
          </div>
